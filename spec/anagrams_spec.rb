@@ -2,8 +2,8 @@ require('anagrams')
 require('rspec')
 
 describe('anagrams method') do
-  it("does something here") do
-    expect(anagrams("input")).to(eq("This is an anagram"))
+  it("evaluates two letters for a match.") do
+    expect(anagrams("i", "i")).to(eq("This is a match"))
   end
 
 end
