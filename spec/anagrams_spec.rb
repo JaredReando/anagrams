@@ -14,8 +14,12 @@ describe('anagrams method') do
     expect(anagrams("sham", "Mash")).to(eq("This is a match"))
   end
 
-  it("checks if inputs are words before comparing values.") do
+  it("checks if inputs contain non-alpha characters before comparing values.") do
     expect(anagrams("shameless", "sham3less")).to(eq("'sham3less' is not a word."))
+  end
+
+  it("checks if inputs contain vowels before comparing values.") do
+    expect(anagrams("plbtttt", "peanuts")).to(eq("'plbtttt' is not a word."))
   end
 
 

@@ -3,7 +3,7 @@ require('pry')
 # class Word < String
 
   def anagrams(word1, word2)
-    if(/\W|\d/.match(word1))
+    if(/\W|\d/.match(word1)) | !(/[aeiouy]/.match(word1))
       return "'#{word1}' is not a word."
     elsif(/\W|\d/.match(word2))
       return "'#{word2}' is not a word."
