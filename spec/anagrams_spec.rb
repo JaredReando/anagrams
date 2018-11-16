@@ -3,27 +3,33 @@ require('rspec')
 
 describe('anagrams method') do
   it("evaluates two letters for a match.") do
-    expect(anagrams("i", "i")).to(eq("This is a match"))
+    word = Word.new("i")
+    expect(word.anagrams("i")).to(eq("This is a match"))
   end
 
   it("evaluates two words for an exact match regardless of case.") do
-    expect(anagrams("apple", "aPplE")).to(eq("This is a match"))
+    word = Word.new("apple")
+    expect(word.anagrams("aPplE")).to(eq("This is a match"))
   end
 
   it("evaluates two words for an anagram match.") do
-    expect(anagrams("sham", "Mash")).to(eq("This is a match"))
+    word = Word.new("sham")
+    expect(word.anagrams("Mash")).to(eq("This is a match"))
   end
 
   it("checks if inputs contain non-alpha characters before comparing values.") do
-    expect(anagrams("shameless", "sham3less")).to(eq("'sham3less' is not a word."))
+    word = Word.new("shameless")
+    expect(word.anagrams("sham3less")).to(eq("'sham3less' is not a word."))
   end
 
   it("checks if inputs contain vowels before comparing values.") do
-    expect(anagrams("plbtttt", "peanuts")).to(eq("'plbtttt' is not a word."))
+    word = Word.new("plbtttt")
+    expect(word.anagrams("peanuts")).to(eq("'plbtttt' is not a word."))
   end
 
   it("checks if inputs contain no matching letters.") do
-    expect(anagrams("scissors", "amaze")).to(eq("'scissors' and 'amaze' are antagrams."))
+    word = Word.new("scissors")
+    expect(word.anagrams("amaze")).to(eq("'scissors' and 'amaze' are antigrams."))
   end
 
 

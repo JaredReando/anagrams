@@ -1,23 +1,28 @@
 require('pry')
 
-# class Word < String
+class Word < String
+    attr_accessor(:string)
 
-  def anagrams(word1, word2)
-    if(/\W|\d/.match(word1)) | !(/[aeiouy]/.match(word1))
-      return "'#{word1}' is not a word."
+    def initialize(string)
+      @string = string
+    end
+
+  def anagrams(word2)
+    if(/\W|\d/.match(@string)) | !(/[aeiouy]/.match(@string))
+      return "'#{@string}' is not a word."
     elsif(/\W|\d/.match(word2))
       return "'#{word2}' is not a word."
     end
 
-    if !(/["#{word1}"]/.match("#{word2}"))
-      return "'#{word1}' and '#{word2}' are antagrams."
+    if !(/["#{@string}"]/.match("#{word2}"))
+      return "'#{@string}' and '#{word2}' are antigrams."
     end
 
-    if(word1.downcase.split("").sort().join() == word2.downcase.split("").sort().join())
+    if(@string.downcase.split("").sort().join() == word2.downcase.split("").sort().join())
     "This is a match"
     else
     "No match"
     end
   end
 
-# end
+end
