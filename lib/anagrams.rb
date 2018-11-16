@@ -9,6 +9,10 @@ require('pry')
       return "'#{word2}' is not a word."
     end
 
+    if !(/["#{word1}"]/.match("#{word2}"))
+      return "'#{word1}' and '#{word2}' are antagrams."
+    end
+
     if(word1.downcase.split("").sort().join() == word2.downcase.split("").sort().join())
     "This is a match"
     else

@@ -22,6 +22,10 @@ describe('anagrams method') do
     expect(anagrams("plbtttt", "peanuts")).to(eq("'plbtttt' is not a word."))
   end
 
+  it("checks if inputs contain no matching letters.") do
+    expect(anagrams("scissors", "amaze")).to(eq("'scissors' and 'amaze' are antagrams."))
+  end
+
 
   # check if two words are anagrams
   #
