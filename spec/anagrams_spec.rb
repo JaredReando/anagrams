@@ -4,19 +4,25 @@ require('rspec')
 word = Word.new("")
 
 describe('anagrams method') do
+
   it("evaluates two letters for a match.") do
     word.string=("i")
-    expect(word.anagrams("i")).to(eq("This is a match"))
+    expect(word.anagrams("i")).to(eq("'i' and 'i' are anagrams!"))
+  end
+
+  it("returns 'no match' for non-matching inputs.") do
+    word.string=("i")
+    expect(word.anagrams("it")).to(eq("No match"))
   end
 
   it("evaluates two words for an exact match regardless of case.") do
     word.string=("apple")
-    expect(word.anagrams("aPplE")).to(eq("This is a match"))
+    expect(word.anagrams("aPplE")).to(eq("'apple' and 'aPplE' are anagrams!"))
   end
 
   it("evaluates two words for an anagram match.") do
     word.string=("sham")
-    expect(word.anagrams("Mash")).to(eq("This is a match"))
+    expect(word.anagrams("Mash")).to(eq("'sham' and 'Mash' are anagrams!"))
   end
 
   it("checks if inputs contain non-alpha characters before comparing values.") do
