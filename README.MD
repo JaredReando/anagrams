@@ -26,7 +26,7 @@ _Questions or feedback: jaredreando@gmail.com_
 ## Technologies
 
 - Ruby
-- rspec, pry, and pivotal_git_scripts gems
+- Gems: rspec, pry, and pivotal_git_scripts
 
 ## Objectives
 
@@ -41,23 +41,25 @@ _Questions or feedback: jaredreando@gmail.com_
     * Description
     * Copyright and license information
 
-- [X] JavaScript business logic and user interface logic are separate.
+- [x] Code uses a custom class and instance variables.
 
-- [X] Variable names are descriptive and use lower camel case (e.g. myVariableExample).
+- [x] Specs have complete coverage for the behaviors that need to be tested. There should be at least 5 unit tests.
 
-- [X] Code is clean, well-refactored, and easy-to-read. This includes correct indentation, spacing, and including only necessary comments and debugging tools.
+- [x] All specs are passing.
 
-- [X] All previous objectives have been met.
+- [x] Logic is easy to understand.
 
-- [X] Logic is broken down into "plain English" specs, listed in README.
+- [x] Code has proper indentation and spacing.
 
-- [X] Project is in a presentable, portfolio-quality state.
+- [x] Variable names are descriptive.
 
-- [X] Required functionality is in place by Friday deadline.
+- [x] Thorough Git documentation is present (regular commits with clear messages completing the sentence "This commit will..." and a complete README). There should be at least 11 commits.
 
-- [X] Project demonstrates understanding of this week's concepts. If prompted, you are able to discuss your code with an instructor using correct terminology.
+- [x] Required functionality is in place by the 5:00pm Friday deadline.
 
-- [X] Application implements a loop and works as expected.
+- [x] Project is in a polished, portfolio-quality state.
+
+- [x] Project demonstrates understanding of this week's concepts. If prompted, you can discuss your code with an instructor using the correct terminology.
 
 
 ### License
