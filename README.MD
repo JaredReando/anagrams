@@ -11,8 +11,6 @@ _A Ruby terminal application that compares two strings and evaluates whether or 
   * Disregarding case, do both strings contain exactly the same letters as each other?
   * Do the inputted strings contain NONE of the same letters? If none match, program identifies inputs as antigrams of each other
 
- _View a hosted version of this project [here](https://jaredreando.github.io/anagrams/)_
-
 ## Setup/Installation Requirements
 
 * Clone this project to your local drive. Link: https://github.com/JaredReando/anagrams/

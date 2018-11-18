@@ -10,10 +10,10 @@ describe('anagram method') do
     expect(word.anagram("i")).to(eq("'i' and 'i' are anagrams!"))
   end
 
-  it("returns 'no match' for non-matching inputs.") do
-    word.string=("i")
-    expect(word.anagram("it")).to(eq("No match"))
-  end
+  # it("returns 'no match' for non-matching inputs.") do
+  #   word.string=("i")
+  #   expect(word.anagram("it")).to(eq("No match"))
+  # end
 
   it("evaluates two words for an exact match regardless of case.") do
     word.string=("apple")
@@ -43,6 +43,11 @@ describe('anagram method') do
   it("ignores spaces when comparing strings.") do
     word.string=("Halleys comet")
     expect(word.anagram("shall yet come")).to(eq("'Halleys comet' and 'shall yet come' are anagrams!"))
+  end
+
+  it("returns matching letters for valid strings that are neither anagrams nor antigrams.") do
+    word.string=("rubenesque")
+    expect(word.anagram("plumpkins")).to(eq("Your entries are not anagrams, but they do share these letters: u, n, s"))
   end
 
 end
