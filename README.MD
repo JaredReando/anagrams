@@ -23,7 +23,7 @@ _Questions or feedback: jaredreando@gmail.com_
 
 ## Technologies
 
-- Ruby
+- Ruby 2.2.2
 - Gems: rspec, pry, and pivotal_git_scripts
 
 ## Objectives
